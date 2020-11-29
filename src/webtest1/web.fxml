@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="936.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="webtest1.webController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="700.0">
+         <top>
+            <AnchorPane prefHeight="45.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton contentDisplay="CENTER" layoutY="5.0" prefHeight="42.0" prefWidth="42.0" text="Button">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="BARS" size="1.4em" text="" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="CENTER" layoutX="247.0" layoutY="1.0" onAction="#todolist" prefHeight="46.0" prefWidth="109.0" text="ToDoList" />
+                  <JFXButton contentDisplay="CENTER" layoutX="347.0" layoutY="1.0" onAction="#google" prefHeight="46.0" prefWidth="109.0" text="Google" />
+                  <JFXButton contentDisplay="CENTER" layoutX="553.0" layoutY="1.0" onAction="#youtube" prefHeight="46.0" prefWidth="109.0" text="Youtube" />
+                  <JFXButton contentDisplay="CENTER" layoutX="452.0" onAction="#facebook" prefHeight="46.0" prefWidth="109.0" text="Facebook" />
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #33A8FF#33A8FF;" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="936.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <WebView fx:id="viewweb" layoutY="29.0" prefHeight="645.0" prefWidth="936.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
